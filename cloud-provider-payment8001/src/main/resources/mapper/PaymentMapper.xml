@@ -4,8 +4,8 @@
 <mapper namespace="cn.xuqg.springcloud.dao.PaymentDao">
 
     <insert id="create" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
-        insert into payment(serial)
-        values (#{serial});
+        insert into payment(id,serial)
+        values (#{id},#{serial});
     </insert>
 
     <resultMap id="BaseResultMap" type="cn.xuqg.springcloud.entities.Payment">
